@@ -1,0 +1,19 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+nav {
+    display: flex;
+    background-color: dodgerblue;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+nav a {
+    color: cornsilk;
+}
+
+nav a.selected {
+    border:solid 1px cornsilk;
+    padding: 0.5rem;
+}

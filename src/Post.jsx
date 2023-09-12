@@ -13,6 +13,7 @@ const Post = ({ posts })=> {
   return(
     <div>
       <h1>Detail for Post: { post.title }</h1>
+      <p>{ post.body }</p>
       <Link to='/posts'>
         Back to All Posts
       </Link>

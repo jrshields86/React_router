@@ -1,5 +1,6 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    background-color: navajowhite;
 }
 
 nav {
@@ -16,4 +17,19 @@ nav a {
 nav a.selected {
     border:solid 1px cornsilk;
     padding: 0.5rem;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline 3px solid black;
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    padding: 4px;
+}
+
+p {
+    text-align: center;
 }

@@ -1,52 +1,10 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
-import { Link, useLocation, Routes, Route } from 'react-router-dom';
-
-const Home = ()=>{
-  return (
-    <h1>Home</h1>
-  );
-}
-const Users = ({ users })=>{
-  return (
-    <div>
-    <h1>Users</h1>
-    <ul>
-      {
-        users.map( user => {
-          return (
-            <li key={ user.id }>
-              { user.name }
-            </li>
-          );
-        })
-      }
-    </ul>
-    </div>
-  );
-}
-const Posts = ({ posts })=>{
-  console.log(posts)
-  return (
-    <div>
-      <h1>Posts</h1>
-      <ul>
-        {
-          posts.map( post => {
-            return (
-              <li key={ post.id }>
-                {
-                  post.title
-                }
-              </li>
-            );
-          })
-        }
-      </ul>
-    </div>
-  );
-}
-
+import { Link, useLocation, Routes, Route, useParams } from 'react-router-dom';
+import Home from './Home';
+import Users from './Users';
+import Posts from './Posts';
+import Post from './Post';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -84,6 +42,7 @@ function App() {
         <Route path='/' element={ <Home /> } />
         <Route path='/users' element={ <Users users={ users } /> } />
         <Route path='/posts' element={ <Posts posts={ posts } /> } />
+        <Route path='/posts/:id' element={ <Post posts={ posts } /> } />
       </Routes>
 
     </>
